@@ -22,11 +22,11 @@ html, body {
     height: 90vh;
     background: linear-gradient(to right,
         rgba(1, 28, 108, 0) 0%,
-        rgba(1, 28, 108, 0.10) 20%,
-        rgba(1, 28, 110, 0.40) 30%,
-        rgba(2, 29, 113, 0.6) 50%,
-        rgba(1, 28, 110, 0.40) 70%,
-        rgba(1, 28, 108, 0.10) 80%,
+        rgba(1, 28, 108, 0.1) 20%,
+        rgba(1, 28, 110, 0.3) 30%,
+        rgba(2, 29, 113, 0.5) 50%,
+        rgba(1, 28, 110, 0.3) 70%,
+        rgba(1, 28, 108, 0.1) 80%,
         rgba(1, 28, 108, 0) 100%);
     display: flex;
     justify-content: center;
@@ -75,14 +75,14 @@ canvas {
     font-size: clamp(32px, 6vw, 64px);
     color: white;
     margin-top: 50vh;
-    text-shadow: 0px 12px 12px rgba(9, 0, 19, 0.6);
+    text-shadow: 0px 12px 12px rgba(9, 0, 19, 0.3);
 }
 
 .subtitle-text {
     font-family: "Yu Gothic UI Light", sans-serif;
     font-size: clamp(12px, 1.8vw, 16px);
     color: white;
-    text-shadow: 0px 2px 3px rgba(3, 0, 17, 0.4);
+    text-shadow: 0px 2px 3px rgba(3, 0, 17, 0.2);
 }
 
 .footer-text {
