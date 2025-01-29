@@ -57,8 +57,8 @@ window.onload = function() {
         for (let i = 0; i < 20; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
-                Math.random() * canvas.width,
-                Math.random() * canvas.height,
+                Math.random() * 512,
+                Math.random() * 1024,
                 Math.random() * 128 + 64,
                 64,
                 Math.random() * 4 + 4,
@@ -70,8 +70,8 @@ window.onload = function() {
         for (let i = 0; i < 10; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
-                Math.random() * canvas.width,
-                Math.random() * canvas.height,
+                Math.random() * 512,
+                Math.random() * 1024,
                 Math.random() * 128 + 128,
                 32,
                 Math.random() * 1.2 + 0.4,
@@ -83,8 +83,8 @@ window.onload = function() {
         for (let i = 0; i < 14; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
-                Math.random() * canvas.width,
-                Math.random() * canvas.height,
+                Math.random() * 1024,
+                Math.random() * 1024,
                 Math.random() * 64 + 64,
                 16,
                 Math.random() * 1.2 + 0.6,
@@ -108,7 +108,7 @@ window.onload = function() {
     }
 
     function animate() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+        ctx.fillStyle = 'rgba(24, 6, 1, 0.6)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.globalCompositeOperation = "screen";
 
