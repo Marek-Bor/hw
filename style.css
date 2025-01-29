@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001030;
+}
+
+.panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: rgba(0, 25, 100, 0.6);
+    z-index: 1;
+}
+
+.panel2 {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    background: rgba(1, 13, 51, 0.7);
+    z-index: 1;
+}
+
+canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.header-text {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    font-family: "Yu Gothic UI", sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.subtitle-text {
+    position: absolute;
+    bottom: 0.7rem;
+    left: 12.5rem;
+    font-family: "Yu Gothic UI", sans-serif;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    color: white;
+}
