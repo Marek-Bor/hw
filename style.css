@@ -44,7 +44,7 @@ canvas {
 
 .header-text {
     position: absolute;
-    bottom: 0%;
+    bottom: 2px;
     left: 24px;
     font-family: "Yu Gothic UI", sans-serif;
     font-size: 56px;
