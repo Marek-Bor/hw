@@ -107,14 +107,6 @@ window.onload = function() {
         }
     }
 
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        createShapes();
-    }
-
-    window.addEventListener('resize', resizeCanvas);
-
     function animate() {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -130,6 +122,6 @@ window.onload = function() {
         setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
     }
 
-    resizeCanvas();
+    createShapes();
     animate();
 };
