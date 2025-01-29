@@ -5,30 +5,38 @@
 }
 
 html, body {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #001030;
+    overflow: hidden;
 }
 
 .panel {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 80%;
+    width: 100vw;
+    height: 80vh;
     background: rgba(0, 30, 117, 0.6);
+    display: flex;
+    justify-content:first baseline;
+    align-items: center;
     z-index: 1;
 }
 
 .panel2 {
     position: absolute;
-    top: 80%;
+    top: 80vh;
     left: 0;
-    width: 100%;
-    height: 32px;
+    width: 100vw;
+    height: 8vh; /* Scales with the viewport */
     background: rgba(0, 13, 55, 0.8);
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
     z-index: 1;
 }
 
@@ -36,29 +44,30 @@ canvas {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures it covers the screen */
     pointer-events: none;
 }
 
 .header-text {
-    position: absolute;
-    bottom: 2px;
-    left: 24px;
     font-family: "Yu Gothic UI", sans-serif;
-    font-size: 56px;
+    font-size: clamp(32px, 5vw, 56px); /* Scales between 32px and 56px */
     font-weight: bold;
     color: white;
+    position: absolute;
+    bottom: 2vh;
+    left: 24px;
+    text-align: center;
+    max-width: 80vw;
 }
 
 .subtitle-text {
-    position: absolute;
-    top: 4px;
-    left: 24px;
     font-family: "Yu Gothic UI", sans-serif;
-    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
     color: white;
+    max-width: 90vw;
+    text-overflow: ellipsis;
 }
