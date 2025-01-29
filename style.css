@@ -44,20 +44,20 @@ canvas {
 
 .header-text {
     position: absolute;
-    bottom: 90%;
+    bottom: 0%;
     left: 2%;
     font-family: "Yu Gothic UI", sans-serif;
-    font-size: xxx-large;
+    font-size: 350%;
     font-weight: bold;
     color: white;
 }
 
 .subtitle-text {
     position: absolute;
-    bottom: 20%;
-    left: 3%;
+    top: 10%;
+    left: 2%;
     font-family: "Yu Gothic UI", sans-serif;
-    font-size: small;
+    font-size: 100%;
     white-space: nowrap;
     overflow-x: auto;
     color: white;

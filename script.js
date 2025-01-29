@@ -93,11 +93,11 @@ window.onload = function() {
             ));
         }
 
-        for (let i = 0; i < 32; i++) {
+        for (let i = 0; i < 64; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
-                Math.random() * canvas.width,
-                Math.random() * canvas.height,
+                Math.random() * 1024,
+                Math.random() * 1024,
                 Math.random() * 2 + 1,
                 0,
                 Math.random() * 2 + 2,
