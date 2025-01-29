@@ -22,21 +22,23 @@ html, body {
     height: 80vh;
     background: rgba(0, 30, 117, 0.6);
     display: flex;
-    justify-content:first baseline;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     z-index: 1;
 }
 
 .panel2 {
     position: absolute;
-    top: 80vh;
+    bottom: 20vh;
     left: 0;
     width: 100vw;
-    height: 8vh; /* Scales with the viewport */
+    height: 8vh;
     background: rgba(0, 13, 55, 0.8);
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-left: 24px;
+    text-align: center;
     z-index: 1;
 }
 
@@ -46,28 +48,29 @@ canvas {
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Ensures it covers the screen */
+    object-fit: cover;
     pointer-events: none;
+}
+
+#pentagonCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .header-text {
     font-family: "Yu Gothic UI", sans-serif;
-    font-size: clamp(32px, 5vw, 56px); /* Scales between 32px and 56px */
-    font-weight: bold;
+    font-size: clamp(32px, 6vw, 64px);
     color: white;
-    position: absolute;
-    bottom: 2vh;
-    left: 24px;
-    text-align: center;
-    max-width: 80vw;
+    margin-top: 50vh;
 }
 
 .subtitle-text {
-    font-family: "Yu Gothic UI", sans-serif;
-    font-size: clamp(12px, 2vw, 16px);
-    white-space: nowrap;
-    overflow-x: hidden;
+    font-family: "Yu Gothic UI Light", sans-serif;
+    font-size: clamp(12px, 1.6vw, 16px);
     color: white;
-    max-width: 90vw;
-    text-overflow: ellipsis;
 }
