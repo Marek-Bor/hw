@@ -10,7 +10,7 @@ window.onload = function() {
         backgroundCanvas.height = window.innerHeight;
         pentagonCanvas.width = window.innerWidth;
         pentagonCanvas.height = window.innerHeight;
-        const size = Math.min(pentagonCanvas.width, pentagonCanvas.height) * 0.05;
+        const size = Math.min(pentagonCanvas.width, pentagonCanvas.height) * 0.0666;
         drawPentagon(pentagonCanvas.width * 0.5 - size, pentagonCanvas.height * 0.35, size, true);
         drawPentagon(pentagonCanvas.width * 0.5 + size * 0.9, pentagonCanvas.height * 0.35, size);
         drawPentagon(pentagonCanvas.width * 0.5 - size * 1.6, pentagonCanvas.height * 0.35 + size * 1.8, size);
