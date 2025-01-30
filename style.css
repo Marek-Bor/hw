@@ -20,14 +20,10 @@ html, body {
     left: 0;
     width: 100vw;
     height: 90vh;
-    background: linear-gradient(to right,
-        rgba(1, 28, 108, 0) 0%,
-        rgba(1, 28, 108, 0.1) 20%,
-        rgba(1, 28, 110, 0.3) 30%,
-        rgba(2, 29, 113, 0.5) 50%,
-        rgba(1, 28, 110, 0.3) 70%,
-        rgba(1, 28, 108, 0.1) 80%,
-        rgba(1, 28, 108, 0) 100%);
+    background: radial-gradient(circle,
+        rgba(4, 35, 159, 0.8),
+        rgba(46, 3, 99, 0.3),
+        rgba(1, 28, 108, 0));
     display: flex;
     justify-content: center;
     flex-direction: column;

@@ -58,52 +58,55 @@ window.onload = function() {
         ctx.fill();
     };
 
+    const unit = Math.min(backgroundCanvas.width, backgroundCanvas.height) * 0.20
+    const counter = Math.max(backgroundCanvas.width, backgroundCanvas.height) * 4 / unit;
+
     function createShapes() {
         for (let i = 0; i < 20; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
                 Math.random() * backgroundCanvas.width,
                 Math.random() * backgroundCanvas.height,
-                Math.random() * 128 + 64,
-                64,
+                Math.random() * unit + unit * 0.5,
+                unit * 0.4,
                 Math.random() * 4 + 4,
                 colorPair[0],
                 colorPair[1]
             ));
         }
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < counter * 0.25; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
                 Math.random() * backgroundCanvas.width,
                 Math.random() * backgroundCanvas.height,
-                Math.random() * 128 + 128,
-                32,
+                Math.random() * unit * 0.5 + unit * 0.5,
+                unit * 0.2,
                 Math.random() * 1.2 + 0.4,
                 colorPair[1],
                 colorPair[0]
             ));
         }
 
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < counter * 0.5; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
                 Math.random() * backgroundCanvas.width,
                 Math.random() * backgroundCanvas.height,
-                Math.random() * 64 + 64,
-                16,
+                Math.random() * unit * 0.25 + unit * 0.25,
+                unit * 0.1,
                 Math.random() * 1.2 + 0.6,
                 colorPair[0],
                 colorPair[1]
             ));
         }
 
-        for (let i = 0; i < 64; i++) {
+        for (let i = 0; i < counter; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
                 Math.random() * backgroundCanvas.width,
                 Math.random() * backgroundCanvas.height,
-                Math.random() * 2 + 1,
+                Math.random() * unit * 0.0125 + unit * 0.0125,
                 0,
                 Math.random() * 2 + 2,
                 colorPair[1],
