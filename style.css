@@ -109,3 +109,17 @@ canvas {
     height: clamp(128px, 18vw, 512px);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
+
+.logo {
+    position: absolute;
+    bottom: clamp(40%, 50vw, 50vh);
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
