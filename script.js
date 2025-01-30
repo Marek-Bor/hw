@@ -2,24 +2,13 @@ window.onload = function() {
     const backgroundCanvas = document.getElementById('backgroundCanvas'); // Background animation
     const ctx = backgroundCanvas.getContext('2d');
 
-    const pentagonCanvas = document.getElementById('pentagonCanvas'); // Top-layer pentagon
-    const topCtx = pentagonCanvas.getContext('2d');
-
     function resizeCanvas() {
         backgroundCanvas.width = window.innerWidth;
         backgroundCanvas.height = window.innerHeight;
-        pentagonCanvas.width = window.innerWidth;
-        pentagonCanvas.height = window.innerHeight;
-        const size = Math.min(pentagonCanvas.width, pentagonCanvas.height) * 0.0666;
-        drawPentagon(pentagonCanvas.width * 0.5 - size, pentagonCanvas.height * 0.35, size, true);
-        drawPentagon(pentagonCanvas.width * 0.5 + size * 0.9, pentagonCanvas.height * 0.35, size);
-        drawPentagon(pentagonCanvas.width * 0.5 - size * 1.6, pentagonCanvas.height * 0.35 + size * 1.8, size);
-        drawPentagon(pentagonCanvas.width * 0.5 + size * 1.5, pentagonCanvas.height * 0.35 + size * 1.8, size);
-        drawPentagon(pentagonCanvas.width * 0.5 - size * 0.05, pentagonCanvas.height * 0.35 + size * 2.9, size);
     }
 
     window.addEventListener('resize', resizeCanvas);
-    resizeCanvas(); // Initial sizing
+    resizeCanvas();
 
     const colors = [
         ['#ff00ff80', '#50c87880'], 
@@ -120,41 +109,6 @@ window.onload = function() {
                 colorPair[1],
                 colorPair[0]
             ));
-        }
-    }
-
-    function drawPentagon(centerX, centerY, size, clear) {
-
-        if (clear)
-        topCtx.clearRect(0, 0, pentagonCanvas.width, pentagonCanvas.height);
-        
-        const angle = Math.PI * 2 / 5;
-
-        topCtx.beginPath();
-        let vertices = [];
-
-        for (let i = 0; i < 5; i++) {
-            let x = centerX + size * Math.cos(angle * i - Math.PI / 2);
-            let y = centerY + size * Math.sin(angle * i - Math.PI / 2);
-            vertices.push({ x, y });
-
-            if (i === 0) {
-                topCtx.moveTo(x, y);
-            } else {
-                topCtx.lineTo(x, y);
-            }
-        }
-        topCtx.closePath();
-        topCtx.strokeStyle = 'white';
-        topCtx.lineWidth = 0.4;
-        topCtx.stroke();
-
-        // Draw small circles at each vertex
-        for (let v of vertices) {
-            topCtx.beginPath();
-            topCtx.arc(v.x, v.y, 2, 0, Math.PI * 2);
-            topCtx.fillStyle = 'white';
-            topCtx.fill();
         }
     }
 

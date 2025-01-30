@@ -82,7 +82,7 @@ canvas {
     font-family: "Yu Gothic UI Light", sans-serif;
     font-size: clamp(12px, 1.8vw, 16px);
     color: white;
-    text-shadow: 0px 2px 3px rgba(3, 0, 17, 0.2);
+    text-shadow: 0px 2px 3px rgba(3, 0, 17, 0.3);
 }
 
 .footer-text {
@@ -94,4 +94,18 @@ canvas {
 .footer-text a {
     color: #6ecefa;
     text-decoration: none;
+}
+
+.logo-svg {
+    position: absolute;
+    width: 18vw;
+    height: 18vw;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.logolines-svg {
+    position: absolute;
+    width: 18vw;
+    height: 18vw;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
