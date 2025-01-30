@@ -98,14 +98,14 @@ canvas {
 
 .logo-svg {
     position: absolute;
-    width: 18vw;
-    height: 18vw;
+    width: clamp(128px, 18vw, 512px);
+    height: clamp(128px, 18vw, 512px);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 .logolines-svg {
     position: absolute;
-    width: 18vw;
-    height: 18vw;
+    width: clamp(128px, 18vw, 512px);
+    height: clamp(128px, 18vw, 512px);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
