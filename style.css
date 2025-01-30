@@ -68,14 +68,14 @@ canvas {
 
 .header-text {
     font-family: "Yu Gothic UI", sans-serif;
-    font-size: clamp(32px, 6vw, 64px);
+    font-size: clamp(48px, 6vw, 64px);
     color: white;
     text-shadow: 0px 14px 12px rgba(9, 0, 19, 0.35);
 }
 
 .subtitle-text {
     font-family: "Yu Gothic UI Light", sans-serif;
-    font-size: clamp(12px, 1.8vw, 16px);
+    font-size: clamp(14px, 1.8vw, 16px);
     color: white;
     text-shadow: 0px 2px 3px rgba(3, 0, 17, 0.3);
 }
@@ -92,7 +92,7 @@ canvas {
 }
 
 .logo-svg {
-    width: clamp(128px, 25vw, 256px);
+    width: clamp(192px, 25vw, 256px);
     height: auto;
     filter: drop-shadow(0px 10px 4px rgba(10, 0, 19, 0.4));
     margin-top: 10vh;
