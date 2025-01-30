@@ -41,7 +41,7 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100vw;
-    height: 10vh;
+    height: clamp(64px, 10vh, 10vw);
     background: rgba(0, 13, 55, 0.66);
     display: flex;
     justify-content: center;
@@ -74,7 +74,6 @@ canvas {
     font-family: "Yu Gothic UI", sans-serif;
     font-size: clamp(32px, 6vw, 64px);
     color: white;
-    margin-top: 50vh;
     text-shadow: 0px 12px 12px rgba(9, 0, 19, 0.3);
 }
 
@@ -97,29 +96,8 @@ canvas {
 }
 
 .logo-svg {
-    position: absolute;
-    width: clamp(128px, 18vw, 512px);
-    height: clamp(128px, 18vw, 512px);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-}
-
-.logolines-svg {
-    position: absolute;
-    width: clamp(128px, 18vw, 512px);
-    height: clamp(128px, 18vw, 512px);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-}
-
-.logo {
-    position: absolute;
-    bottom: clamp(40%, 50vw, 50vh);
-    left: 0;
-    width: 100vw;
-    height: 10vh;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
+    width: clamp(128px, 25vw, 256px);
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(11, 0, 21, 0.4));
+    margin-top: 10vh;
 }
