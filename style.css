@@ -74,7 +74,7 @@ canvas {
     font-family: "Yu Gothic UI", sans-serif;
     font-size: clamp(32px, 6vw, 64px);
     color: white;
-    text-shadow: 0px 12px 12px rgba(9, 0, 19, 0.3);
+    text-shadow: 0px 14px 12px rgba(9, 0, 19, 0.35);
 }
 
 .subtitle-text {
@@ -98,6 +98,6 @@ canvas {
 .logo-svg {
     width: clamp(128px, 25vw, 256px);
     height: auto;
-    filter: drop-shadow(0px 4px 4px rgba(11, 0, 21, 0.4));
+    filter: drop-shadow(0px 10px 4px rgba(10, 0, 19, 0.4));
     margin-top: 10vh;
 }
