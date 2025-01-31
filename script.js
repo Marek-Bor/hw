@@ -24,45 +24,47 @@ window.onload = function() {
 
     const shapes = [];
 
-    function Shape(x, y, radius, blur, speed, color1, color2) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.blur = blur;
-        this.speed = speed;
-        this.color1 = color1;
-        this.color2 = color2;
-        this.direction = Math.random() * Math.PI * 4;
+    class Shape {
+        constructor(x, y, radius, blur, speed, color1, color2) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.blur = blur;
+            this.speed = speed;
+            this.color1 = color1;
+            this.color2 = color2;
+            this.direction = Math.random() * Math.PI * 4;
+        }
+
+        update() {
+            this.x += Math.cos(this.direction) * this.speed;
+            this.y += Math.sin(this.direction) * this.speed;
+
+            if (this.x + 6 * this.radius < 0 || this.x + 2 * this.radius > backgroundCanvas.width) {
+                this.direction = Math.PI - this.direction;
+            }
+            if (this.y - this.radius < 0 || this.y + this.radius > backgroundCanvas.height) {
+                this.direction = -this.direction;
+            }
+        }
+        
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+            gradient.addColorStop(0, this.color1);
+            gradient.addColorStop(1, this.color2);
+            ctx.filter = `blur(${this.blur}px)`;
+            ctx.fillStyle = gradient;
+            ctx.fill();
+        }
     }
-
-    Shape.prototype.update = function() {
-        this.x += Math.cos(this.direction) * this.speed;
-        this.y += Math.sin(this.direction) * this.speed;
-
-        if (this.x + 6 * this.radius < 0 || this.x + 2 * this.radius > backgroundCanvas.width) {
-            this.direction = Math.PI - this.direction;
-        }
-        if (this.y - this.radius < 0 || this.y + this.radius > backgroundCanvas.height) {
-            this.direction = -this.direction;
-        }
-    };
-
-    Shape.prototype.draw = function() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
-        gradient.addColorStop(0, this.color1);
-        gradient.addColorStop(1, this.color2);
-        ctx.filter = `blur(${this.blur}px)`;
-        ctx.fillStyle = gradient;
-        ctx.fill();
-    };
 
     const unit = Math.min(backgroundCanvas.width, backgroundCanvas.height) * 0.20
     const counter = Math.max(backgroundCanvas.width, backgroundCanvas.height) * 4 / unit;
 
     function createShapes() {
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < counter * 0.2; i++) {
             const colorPair = getRandomColorPair();
             shapes.push(new Shape(
                 Math.random() * backgroundCanvas.width,
